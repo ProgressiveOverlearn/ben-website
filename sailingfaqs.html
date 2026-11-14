@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailing FAQs</title>
+    <style>
+
+        /*Fonts used across all pages. Part of template.*/
+        @font-face
+        {
+            font-family: 'EXPEND-Bold';
+            src: url(fonts/EXPEND-Bold.otf);
+        }
+        @font-face 
+        {
+            font-family: 'Thamire';
+            src: url(fonts/Thamire.otf);
+        }
+
+        @font-face 
+        {
+            font-family: 'Shield';
+            src: url(fonts/Shield.otf);
+        }
+
+        @font-face 
+        {
+            font-family: 'Summer';
+            src: url(fonts/Summer.ttf);
+        }
+
+        /*Styles the header across all pages. Part of template.*/
+        header
+        {
+            border-radius:8px;
+            margin-bottom: 1px;
+        }
+
+        header h1 /*Styles the website name. Part of template.*/
+        {
+            color: white;
+            font-size: 28px;
+            text-align:center;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        .headertable /*Styles the header table. Part of template.*/
+        {
+            width: 50%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+            background-color: rgb(3, 0, 198);
+            border: 4px solid black;
+            border-radius:8px;
+            background-image: url(images/darkblue.png);
+        }
+
+        .navigationbar /*Styles the navigation bar across all pages. Part of template.*/
+        {
+            background-color: rgb(3, 0, 198);
+            background-image: url(images/darkblue.png);
+            color: white;
+            border: 4px solid black;
+            border-radius:8px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo /*Styles the logo across all pages. Part of template.*/
+        {
+            margin-right:20px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        body /*Designates the background image for the website. Part of template.*/
+        {
+            background-image: url(images/sky.png);
+            background-size: cover;
+        }
+        /*Styles the introduction of the current page. Part of template.*/
+        #currentpage
+        {
+            text-align:center;
+            font-size: 28px;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            color:white;
+            border-radius:4px;
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:40px;
+        }
+
+        /*Styles the contents. Part of template.*/
+        #contents
+        {
+            text-align:center;
+            font-size:18px;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(255, 255, 255);
+            background-color:rgb(3, 0, 198);
+            border:4px solid black;
+            border-radius:8px;
+            margin-left:10%;
+            margin-right:10%;
+            margin-top:1px;
+            margin-bottom:1px;
+            padding:30px;
+            background-image: url(images/darkblue.png);
+            text-shadow: 1px 1px #000000;
+        }
+        
+        a /*Indicate places to where links are in green. Part of template.*/
+        {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        a:hover /*Changes color of links when hovered over. Part of template.*/
+        {
+            background-color: rgb(55, 99, 244);
+        }
+        li /*Styles bullet points of FAQs table*/
+        {
+            text-align: left;
+        }
+
+        .navoptions /*Styles the content inside the navigation bar. Part of template.*/
+        {
+            font-size:18px;
+            margin-right:4%;
+            display: inline;
+            text-align:center;
+            color: white;
+            text-decoration: none;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        footer /*The footer for the pages. Part of template.*/
+        {
+            /*position: sticky;
+            bottom:0;*/
+            font-size: 16px;
+            padding:2px;
+            color:white;
+            background-color:rgb(3, 0, 198);
+            border: 4px solid black;
+            text-align:center;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url(images/darkblue.png);
+            border-radius:8px;
+            text-shadow: 1px 1px #2200ff;
+        }
+        /*Responsive design for smaller screens. Part of template.*/
+        @media screen and (max-width: 900px) 
+        {
+            header img
+            {
+                width: 50px;
+                height: 50px;
+            }
+            header h1, #currentpage, #details {
+                font-size: 24px;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 20px;
+            }
+
+            .navigationbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navoptions {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .navigationbar
+            {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #contents table
+        {
+            width: 80%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+            background-color: rgb(3, 0, 198);
+            border: 4px solid black;
+            border-radius:8px;
+            background-image: url(images/darkblue.png);
+        }
+
+        #contents td
+        {
+            border:2px solid white;
+            font-size:20px;
+            font-family:Summer, Verdana, Geneva, Tahoma, sans-serif;
+            background-color:rgb(44, 0, 203);
+            background-image: url(images/bluerocks.jpg);
+        }
+
+        #contents th
+        {
+            border:2px solid white;
+            font-size:24px;
+            font-family:Summer, Verdana, Geneva, Tahoma, sans-serif;
+            background-color:rgb(0, 0, 0);
+            background-image: url(images/bluerocks.jpg);
+            text-shadow: 2px 2px #000000;
+        }
+
+    </style>
+</head>
+
+<body>
+<!--Website logo & name. Part of template.-->
+<header>
+    <table class="headertable">
+        <tr>
+        <td><img class="logo" src="images/compass1.png" alt="Ben's Logo"></td>
+        <td><h1>Ben's Guide to Sailing in Boston</h1></td>
+        </tr>
+    </table>
+</header>
+
+    <!--Navigation set into 1 Table for organization & styling. Part of template.-->
+    <nav style="width:80%; margin:auto; padding:auto; text-align:center">
+        <ul class="navigationbar">
+            <li class="navoptions"><a href="home.html">Home</a></li>
+            <li class="navoptions"><a href="bostonsailing.html">Sail In Boston</a></li>
+            <li class="navoptions"><a href="howtosail.html">Learn To Sail</a></li>
+            <li class="navoptions"><a href="boatcomponents.html">Parts Of A Sailboat</a></li>
+            <li class="navoptions"><a href="sailingfaqs.html">Sailing FAQs</a></li>
+            <li class="navoptions"><a href="contactme.html">Other Questions?</a></li>
+        </ul>
+    </nav>
+
+<!--Contents of the sailing FAQs.-->
+<div id="contents" style="background-image:url(images/waves2.png); background-size:cover;">
+<h1 id="currentpage" style="text-shadow: 2px 2px #000000;">Here are some answers to common questions about sailing:</h1>
+<table id="contents">
+    <tr>
+        <th>Question</th>
+        <th>Answer</th>
+    </tr>
+    <tr>
+        <td><p>What is sailing?</p></td>
+        <td><p>It is the art and practice of using various techniques to move a boat using wind. It can be done as a hobby, sport, or transportation.</p></td>
+    </tr>
+    <tr>
+        <td><p>Do I need to be strong to sail?</p></td>
+        <td><p>Physical strength can be helpful for handling equipment, but strong technique, teamwork, and communication are far more important for sailing.</p></td>
+    </tr>
+    <tr>
+        <td><p>What should I wear for sailing?</p></td>
+        <td><p>Wear clothing in multiple layers that's water resistant, including gloves and slip-resistant boots. You may also be exposed to the sun, so a hat, sunscreen, and sunglasses are also needed.</p></td>
+    </tr>
+    <tr>
+        <td><p>Do I need a license to sail?</p></td>
+        <td><p>In the United States, it may depend on state laws. It's probably a good idea to undergo training anyway to earn a boating safety certificate for that reason.</p></td>
+    </tr>
+    <tr>
+        <td><p>What is the difference between a sailboat and a yacht?</p></td>
+        <td><p>Sailboats rely on wind for movement while yachts use engines as well. Yachts are more luxurious and larger than sailboats.</p></td>
+    </tr>
+    <tr>
+        <td><p>Is sailing safe?</p></td>
+        <td><p>It is safe when done with safety guidelines in place. Be mindful of safety gear, weather, and proper training.</p></td>
+    </tr>
+    <tr>
+        <td><p>What is tacking?</p></td>
+        <td><p>It is a sailing technique of turning the bow (front) of the boat to change the direction of a sailboat when sailing upwind or the wind's angle.</p></td>
+    </tr>
+    <tr>
+        <td><p>What is gybing?</p></td>
+        <td><p>Similar to tacking, but you are turning the stern (back) of the boat through the wind instead. It is done when sailing downward.</p></td>
+    </tr>
+    <tr>
+        <td><p>Can I sail in any weather?</p></td>
+        <td><p>It is not recommended, especially if you're a beginner. There should be wind, but not too much wind to avoid getting into overwhelming situations. Heavy weather can also make it challenging. Always refer to weather and sea forecasts as rough seas can also make sailing difficult.</p></td>
+    </tr>
+    <tr>
+        <td><p>What safety equipment do I need?</p></td>
+        <td><p>Quite a bit, actually. Life jackets, a VHF radio, first aid kit, signaling devices like flares, fire extinguisher, bailer, navigation lights, and safety tether. They will make a difference in dangerous situations.</p></td>
+    </tr>
+    <tr>
+        <td><p>How do I read a nautical chart?</p></td>
+        <td><p>Look for symbols and abbreviations and what they mean. As well as latitude, longitude, depth indications, navigational aids, and compass rose.</p></td>
+    </tr>
+    <tr>
+        <td><p>What is a mooring?</p></td>
+        <td><p>It is securely tying your boat to a fixed structure, like a mooring ball. </p></td>
+    </tr>
+    <tr>
+        <td><p>How do I dock a sailboat?</p></td>
+        <td><p>Approach the dock slowly and against the wind and current. Then place fenders on the side of the boat to contact the dock and secure the lines to it.</p></td>
+    </tr>
+    <tr>
+        <td><p>What are the sailing knots?</p></td>
+        <td><p>Some of them are: bowline, clove hitch, reef knot, sheet bend, and cleat hitch. <a href="https://www.animatedknots.com/boating-knots" target="_blank">Learn More By Clicking Here.</a></p></td>
+    </tr>
+    <tr>
+        <td><p>What does "man overboard" mean?</p></td>
+        <td><p>It means a member of the ship is off the ship and needs to be rescued. Use the steps of shouting the phrase, keeping the person afloat, and working as a team to get them back on the boat.</p></td>
+    </tr>
+    <tr>
+        <td><p>What kind of boat should I start with?</p></td>
+        <td><p>It is recommended to look for a keelboat, dinghies, or a smallboat program first. Then work your way up to a yacht if that's your goal.</p></td>
+    </tr>
+    <tr>
+        <td><p>How long does it take to learn how to sail?</p></td>
+        <td><p>It depends on the structure of the program. It typically takes a few days to feel comfortable sailing in easier conditions.</p></td>
+    </tr>
+    <tr>
+        <td><p>What is being seasick? Will I get seasick?</p></td>
+        <td><p>It is motion sickness because of a boat's motion on water. You may get seasick, but don't be alarmed. It's common if you're not used to it, but you will adapt to it over time.</p></td>
+    </tr>
+    
+</table>
+</div>
+
+    <!--Footer across all pages. Part of template.-->
+<footer>
+        <p>"Believe me, my young friend, there is nothing — absolutely nothing — half so much worth doing as simply messing about in boats." --the Water Rat, <i>The Wind in the Willows</i>
+        <br><br>Website Designed By Miguel Melendez & Basir Kamjo</p>
+</footer>
+</body>
+</html>

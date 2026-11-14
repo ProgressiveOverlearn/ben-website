@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sail In Boston</title>
+    <style>
+
+        /*Fonts used across all pages. Part of template.*/
+        @font-face
+        {
+            font-family: 'EXPEND-Bold';
+            src: url(fonts/EXPEND-Bold.otf);
+        }
+        @font-face 
+        {
+            font-family: 'Thamire';
+            src: url(fonts/Thamire.otf);
+        }
+
+        @font-face 
+        {
+            font-family: 'Shield';
+            src: url(fonts/Shield.otf);
+        }
+
+        /*Styles the header across all pages. Part of template.*/
+        header
+        {
+            border-radius:8px;
+            margin-bottom: 1px;
+        }
+
+        header h1 /*Styles the website name. Part of template.*/
+        {
+            color: white;
+            font-size: 28px;
+            text-align:center;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        .headertable /*Styles the header table. Part of template.*/
+        {
+            width: 50%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+            background-color: rgb(3, 0, 198);
+            border: 4px solid black;
+            border-radius:8px;
+            background-image: url(images/darkblue.png);
+        }
+
+        .navigationbar /*Styles the navigation bar across all pages. Part of template.*/
+        {
+            background-color: rgb(3, 0, 198);
+            background-image: url(images/darkblue.png);
+            color: white;
+            border: 4px solid black;
+            border-radius:8px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo /*Styles the logo across all pages. Part of template.*/
+        {
+            margin-right:20px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        body /*Designates the background image for the website. Part of template.*/
+        {
+            background-image: url(images/sky.png);
+            background-size: cover;
+        }
+        /*Styles the introduction of the current page. Part of template.*/
+        #currentpage
+        {
+            text-align:center;
+            font-size: 28px;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            color:white;
+            border-radius:4px;
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:40px;
+        }
+
+        /*Styles the contents. Part of template.*/
+        #contents
+        {
+            text-align:center;
+            font-size:18px;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(255, 255, 255);
+            background-color:rgb(3, 0, 198);
+            border:4px solid black;
+            border-radius:8px;
+            margin-left:10%;
+            margin-right:10%;
+            margin-top:1px;
+            margin-bottom:1px;
+            padding:30px;
+            background-image: url(images/darkblue.png);
+            text-shadow: 1px 1px #2200ff;
+        }
+        
+        a /*Indicate places to where links are in green. Part of template.*/
+        {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        a:hover /*Changes color of links when hovered over. Part of template.*/
+        {
+            background-color: rgb(55, 99, 244);
+        }
+        li /*Styles bullet points of FAQs table*/
+        {
+            text-align: left;
+        }
+
+        .navoptions /*Styles the content inside the navigation bar. Part of template.*/
+        {
+            font-size:18px;
+            margin-right:4%;
+            display: inline;
+            text-align:center;
+            color: white;
+            text-decoration: none;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        footer /*The footer for the pages. Part of template.*/
+        {
+            /*position: sticky;
+            bottom:0;*/
+            font-size: 16px;
+            padding:2px;
+            color:white;
+            background-color:rgb(3, 0, 198);
+            border: 4px solid black;
+            text-align:center;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url(images/darkblue.png);
+            border-radius:8px;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        #locationphoto
+        {
+            width: 360px;
+            height: 240px;
+            border-radius:8px;
+            border: 4px solid black;
+        }
+
+        #locationmap
+        {
+            width: 360px;
+            height: 240px;
+            border-radius:8px;
+            border: 4px solid black;
+        }
+
+        /*Responsive design for smaller screens. Part of template.*/
+        @media screen and (max-width: 900px) 
+        {
+            header img
+            {
+                width: 50px;
+                height: 50px;
+            }
+            header h1, #currentpage, #details {
+                font-size: 24px;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 20px;
+            }
+
+            .navigationbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navoptions {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .navigationbar
+            {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #locationphoto
+            {
+                width: 80%;
+                height: 80%;
+            }
+
+            #locationmap
+            {
+                width: 100%;
+                height: 360px;
+                margin-bottom:0px;
+            }
+        }
+
+        #contents table
+        {
+            width: 80%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+            background-color: rgb(3, 0, 198);
+            border: 2px solid white;
+            border-radius:8px;
+            background-image: url(images/darkblue.png);
+        }
+
+        tr p
+        {
+            font-size:14px;
+        }
+
+        #contents td
+        {
+            border:2px solid white;
+            font-size:16px;
+        }
+
+        #locationlink
+        {
+            background-color: rgb(97, 100, 112);
+        }
+
+        #locationlink:hover
+        {
+            background-color: rgb(12, 37, 150);
+        }
+
+    </style>
+</head>
+
+<body>
+<!--Website logo & name. Part of template.-->
+<header>
+    <table class="headertable">
+        <tr>
+        <td><img class="logo" src="images/compass1.png" alt="Ben's Logo"></td>
+        <td><h1>Ben's Guide to Sailing in Boston</h1></td>
+        </tr>
+    </table>
+</header>
+
+    <!--Navigation set into 1 Table for organization & styling. Part of template.-->
+    <nav style="width:80%; margin:auto; padding:auto; text-align:center">
+        <ul class="navigationbar">
+            <li class="navoptions"><a href="home.html">Home</a></li>
+            <li class="navoptions"><a href="bostonsailing.html">Sail In Boston</a></li>
+            <li class="navoptions"><a href="howtosail.html">Learn To Sail</a></li>
+            <li class="navoptions"><a href="boatcomponents.html">Parts Of A Sailboat</a></li>
+            <li class="navoptions"><a href="sailingfaqs.html">Sailing FAQs</a></li>
+            <li class="navoptions"><a href="contactme.html">Other Questions?</a></li>
+        </ul>
+    </nav>
+
+<!--Contents of the Boston sailing page.-->
+<div id="contents" style="background-image:url(images/waves2.png); background-size:cover;">
+<h1 id="currentpage" style="text-shadow: 2px 2px #000000;">Here Are Recommended Locations For Sailing in Boston:</h1>
+<table id="contents">
+    <tr>
+        <td><p>⛵Community Boating<br>21 David G Mugar Way, Boston, MA 02114<br><br><a id="locationlink" href="https://www.community-boating.org/" target="_blank">Click Here For Their Website</a></p></td>
+        <td><p>⭐Classes are offered for adults and children<br>⭐Variety of membership offerings for sailors of all skill levels<br>⭐Relatively low costs for sailing<br>⭐Sailboat rentals also available for non-members<br></p></td>
+    </tr>
+</table>
+
+<table style="margin-bottom:20px; border:none;">
+    <iframe id="locationmap" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=community%20boating%20boston%20ma+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <img id="locationphoto" src="images/communityboating.jpg" alt="Community Boating">
+</table>
+
+<table id="contents">
+    <tr>
+        <td><p>⛵Courageous Sailing<br>Navy Yard, Pier Four Blvd, Boston, MA 02129<br><br><a id="locationlink" href="https://courageoussailing.org/" target="_blank">Click Here For Their Website</a></p></td>
+        <td><p>⭐Classes are offered for adults and children<br>⭐Youth programming offers a path for youth to go from being a beginner to instructor<br>⭐Nearby parking at the Nautica Garage with low cost<br>⭐Courses are available, and require no membership<br></p></td>
+    </tr>
+</table>
+
+<table style="margin-bottom:20px; border:none;">
+    <iframe id="locationmap" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=courageous%20sailing%20boston+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <img id="locationphoto" src="images/courageoussailing.jpg" alt="Courageous Sailing">
+</table>
+
+<table id="contents">
+    <tr>
+        <td><p>⛵Piers Park Sailing Center<br>95 Marginal St, Boston, MA 02128<br><br><a id="locationlink" href="https://piersparksailing.org/" target="_blank">Click Here For Their Website</a></p></td>
+        <td><p>⭐Classes are offered for adults and children<br>⭐Sailing afterschool program offered for ages 10+<br>⭐Cold water sailing offered through the Hardy Sailor Season Pass<br>
+            ⭐Learn To Sail class and Sailing Season Pass can be bought in a bundle<br></p></td>
+    </tr>
+</table>
+
+<table style="margin-bottom:20px; border:none;">
+    <iframe id="locationmap" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=piers%20park%20sailing%20center+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <img id="locationphoto" src="images/pierspark.jpeg" alt="Piers Park Sailing Center">
+</table>
+
+<table id="contents">
+    <tr>
+        <td><p>⛵SailTime Boston<br>1 Pier 8, Charlestown, MA 02129<br><br><a id="locationlink" href="https://sailtime.com/location/boston/sailing-school/" target="_blank">Click Here For Their Website</a></p></td>
+        <td><p>⭐Classes are offered for adults only<br>⭐Small class sizes of 2 to 4 students for 1 instructor<br>⭐Premier membership allows you to take your boat out for up to 7 continous days<br>
+            ⭐Six ASA courses are available: 101, 103, 104, 105, 106, & 114<br></p></td>
+    </tr>
+</table>
+
+<table style="margin-bottom:20px; border:none;">
+    <iframe id="locationmap" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=sailtime%20boston+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <img id="locationphoto" src="images/sailtime.jpg" alt="SailTime Boston">
+</table>
+
+<table id="contents">
+    <tr>
+        <td><p>⛵Crimson Sailing Academy<br>45 Memorial Dr, Cambridge, MA 02142<br><br><a id="locationlink" href="https://crimsonsailingacademy.com/index.html" target="_blank">Click Here For Their Website</a></p></td>
+        <td><p>⭐Classes are offered for children only<br>⭐A clear and detailed schedule for campers in the program<br>⭐Campers must pass a swimming test, but the test is free<br>
+            ⭐One week registration is $600 instead of $650 if done early<br></p></td>
+    </tr>
+</table>
+
+<table style="margin-bottom:20px; border:none;">
+    <iframe id="locationmap" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=crimson%20sailing%20academy+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <img id="locationphoto" src="images/crimsonsailing.jpg" alt="Crimson Sailing">
+</table>
+
+<table id="contents">
+    <tr>
+        <td><p>⛵Boston Sailing Center<br>54 Lewis Wharf, Boston, MA 02110<br><br><a id="locationlink" href="https://bostonsailingcenter.com/" target="_blank">Click Here For Their Website</a></p></td>
+        <td><p>⭐Classes are offered for adults only<br>⭐Variety of memberships available for unlimited sailing<br>⭐Can "share" memberships to 2 other friends for 50% off of your own membership<br>
+            ⭐Beginner and advanced sailing courses available<br></p></td>
+    </tr>
+</table>
+
+<table style= "border:none;">
+    <iframe id="locationmap" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=boston%20sailing%20center+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <img id="locationphoto" src="images/bostonsailingcenter.jpg" alt="Boston Sailing Center">
+</table>
+
+</div>
+
+    <!--Footer across all pages. Part of template.-->
+<footer>
+        <p>"Believe me, my young friend, there is nothing — absolutely nothing — half so much worth doing as simply messing about in boats." --the Water Rat, <i>The Wind in the Willows</i>
+        <br><br>Website Designed By Miguel Melendez & Basir Kamjo</p>
+</footer>
+</body>
+</html>

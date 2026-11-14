@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parts Of A Sailboat</title>
+    <style>
+
+        /*Fonts used across all pages. Part of template.*/
+        @font-face
+        {
+            font-family: 'EXPEND-Bold';
+            src: url(fonts/EXPEND-Bold.otf);
+        }
+        @font-face 
+        {
+            font-family: 'Thamire';
+            src: url(fonts/Thamire.otf);
+        }
+
+        @font-face 
+        {
+            font-family: 'Shield';
+            src: url(fonts/Shield.otf);
+        }
+
+        /*Styles the header across all pages. Part of template.*/
+        header
+        {
+            border-radius:8px;
+            margin-bottom: 1px;
+        }
+
+        header h1 /*Styles the website name. Part of template.*/
+        {
+            color: white;
+            font-size: 28px;
+            text-align:center;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        .headertable /*Styles the header table. Part of template.*/
+        {
+            width: 50%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+            background-color: rgb(3, 0, 198);
+            border: 4px solid black;
+            border-radius:8px;
+            background-image: url(images/darkblue.png);
+        }
+
+        .navigationbar /*Styles the navigation bar across all pages. Part of template.*/
+        {
+            background-color: rgb(3, 0, 198);
+            background-image: url(images/darkblue.png);
+            color: white;
+            border: 4px solid black;
+            border-radius:8px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo /*Styles the logo across all pages. Part of template.*/
+        {
+            margin-right:20px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        body /*Designates the background image for the website. Part of template.*/
+        {
+            background-image: url(images/sky.png);
+            background-size: cover;
+        }
+        /*Styles the introduction of the current page. Part of template.*/
+        #currentpage
+        {
+            text-align:center;
+            font-size: 28px;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            color:white;
+            border-radius:4px;
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:40px;
+        }
+
+        /*Styles the contents. Part of template.*/
+        #contents
+        {
+            text-align:center;
+            font-size:18px;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(255, 255, 255);
+            background-color:rgb(3, 0, 198);
+            border:4px solid black;
+            border-radius:8px;
+            margin-left:10%;
+            margin-right:10%;
+            margin-top:1px;
+            margin-bottom:1px;
+            padding:30px;
+            background-image: url(images/darkblue.png);
+            text-shadow: 1px 1px #2200ff;
+        }
+        
+        a /*Indicate places to where links are in green. Part of template.*/
+        {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        a:hover /*Changes color of links when hovered over. Part of template.*/
+        {
+            background-color: rgb(55, 99, 244);
+        }
+        li /*Styles bullet points of FAQs table*/
+        {
+            text-align: left;
+        }
+
+        .navoptions /*Styles the content inside the navigation bar. Part of template.*/
+        {
+            font-size:18px;
+            margin-right:4%;
+            display: inline;
+            text-align:center;
+            color: white;
+            text-decoration: none;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        footer /*The footer for the pages. Part of template.*/
+        {
+            /*position: sticky;
+            bottom:0;*/
+            font-size: 16px;
+            padding:2px;
+            color:white;
+            background-color:rgb(3, 0, 198);
+            border: 4px solid black;
+            text-align:center;
+            font-family:EXPEND-bold, Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url(images/darkblue.png);
+            border-radius:8px;
+            text-shadow: 1px 1px #2200ff;
+        }
+
+        #contents img, iframe
+        {
+            border:4px solid black;
+            border-radius:8px;
+        }
+
+        /*Responsive design for the sailing image on smaller screens.*/
+        @media screen and (max-width: 1280px) 
+        {
+            #sailingimage
+            {
+                width: 60%;
+                height: auto;
+            }
+        }
+
+        /*Responsive design for small screens. Part of template.*/
+        @media screen and (max-width: 900px) 
+        {
+            #sailingimage
+            {
+                width: 100%;
+                height: auto;
+            }
+
+            iframe
+            {
+                width: 100%;
+            }
+
+            header img
+            {
+                width: 50px;
+                height: 50px;
+            }
+            header h1, #currentpage, #details {
+                font-size: 24px;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding: 20px;
+            }
+
+            .navigationbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navoptions {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .navigationbar
+            {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<!--Website logo & name. Part of template.-->
+<header>
+    <table class="headertable">
+        <tr>
+        <td><img class="logo" src="images/compass1.png" alt="Ben's Logo"></td>
+        <td><h1>Ben's Guide to Sailing in Boston</h1></td>
+        </tr>
+    </table>
+</header>
+
+    <!--Navigation set into 1 Table for organization & styling. Part of template.-->
+    <nav style="width:80%; margin:auto; padding:auto; text-align:center">
+        <ul class="navigationbar">
+            <li class="navoptions"><a href="home.html">Home</a></li>
+            <li class="navoptions"><a href="bostonsailing.html">Sail In Boston</a></li>
+            <li class="navoptions"><a href="howtosail.html">Learn To Sail</a></li>
+            <li class="navoptions"><a href="boatcomponents.html">Parts Of A Sailboat</a></li>
+            <li class="navoptions"><a href="sailingfaqs.html">Sailing FAQs</a></li>
+            <li class="navoptions"><a href="contactme.html">Other Questions?</a></li>
+        </ul>
+    </nav>
+
+<!--Contents of the boat components page.-->
+<div id="contents" style="background-image:url(images/waves2.png); background-size:cover;">
+<h1 id="currentpage" style="text-shadow: 2px 2px #000000;">Here are some components of a sailboat and their purposes:</h1>
+<p id="contents" style="margin-bottom:20px">According to the American Sailing Association, you will learn the parts of a sailboat if you take the ASA 101 course.<br><br>
+If you want to get a head start, here are three resources to look at: <br><br>1) A simple diagram <br>2) An introductory video <br>3) A website that goes into more detail</p>
+<img style="margin-bottom:20px;" src="images/sailboatpicture.png" width="50%" height="50%" alt="Parts of a sailboat" id="sailingimage">
+<iframe style="margin-bottom:20px" width="80%" height="480" src="https://www.youtube.com/embed/hJHkil8HOHo"></iframe>
+<iframe src="https://sailingellidah.com/parts-of-a-sailboat/" width="80%" height="480"></iframe>
+
+
+
+</div>
+
+    <!--Footer across all pages. Part of template.-->
+<footer>
+        <p>"Believe me, my young friend, there is nothing — absolutely nothing — half so much worth doing as simply messing about in boats." --the Water Rat, <i>The Wind in the Willows</i>
+        <br><br>Website Designed By Miguel Melendez & Basir Kamjo</p>
+</body>
+</html>
